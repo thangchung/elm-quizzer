@@ -1,0 +1,377 @@
+{
+    "quizzes": [
+        {
+            "id": 1,
+            "name": "C# and .Net Framework",
+            "description": "C# and .Net Quiz (contains C#, .Net Framework, Linq, etc.)",
+            "questions": [
+                {
+                    "id": 1010,
+                    "name": "Which of the following assemblies can be stored in Global Assembly Cache?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Private Assemblies",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Friend Assemblies",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Public Assemblies",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Shared Assemblies",
+                            "is_answer": true
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1011,
+                    "name": "Which of the following .NET components can be used to remove unused references from the managed heap?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Language Infrastructure",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "CLR",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Garbage Collector",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Class Loader",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "CTS",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1012,
+                    "name": "Which of the following utilities can be used to compile managed assemblies into processor-specific native code?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "gacutil",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "ngen",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "dumpbin",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "ildasm",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1013,
+                    "name": "Which of the following is NOT an Arithmetic operator in C#.NET?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "** (Double Star)",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "+ (Plus)",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "/ (Divide)",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "% (Modulo)",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1014,
+                    "name": "Which of the following statements is correct about an interface used in C#.NET?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "If a class implements an interface partially, then it should be an abstract class.",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "A class cannot implement an interface partially.",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "An interface can contain static methods.",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "An interface can contain static data.",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1015,
+                    "name": "What does the term <strong>immutable</strong> means in term of string objects?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "We can modify characters included in the string",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "We cannot modify characters contained in the string",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "We cannot perform various operation of comparison, inserting, appending etc",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "None of the above",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1016,
+                    "name": "Which of the following is NOT a .NET Exception class?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Exception",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "StackMemoryException",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "DivideByZeroException",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "InvalidOperationException",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1017,
+                    "name": "In C#.NET if we do not catch the exception thrown at runtime then which of the following will catch it?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Compiler",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "CLR",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Linker",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Operating system",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1018,
+                    "name": "Which of the following statements are correct about delegates?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Delegates cannot be used to call a static method of a class.",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Delegates cannot be used to call procedures that receive variable number of arguments.",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "If signatures of two methods are same they can be called through the same delegate object.",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Delegates cannot be used to call an instance function. Delegates cannot be used to call an instance subroutine.",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1019,
+                    "name": "Which of the following does NOT represent Integer?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Char",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Byte",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Short",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Long",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "elm-quizzer",
+  "version": "1.0.0",
+  "description": "The mock API for elm-quizzer",
+  "main": "api.js",
+  "scripts": {
+    "api": "node api.js",
+    "start": "webpack-dev-server --port 8888 --hot --inline --content-base src/",
+    "build": "rimraf dist && webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thangchung/elm-quizzer.git"
+  },
+  "keywords": [
+    "elm-quizzer"
+  ],
+  "author": "thangchung",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thangchung/elm-quizzer/issues"
+  },
+  "homepage": "https://github.com/thangchung/elm-quizzer#readme",
+  "dependencies": {
+    "font-awesome": "4.6.3",
+    "json-server": "^0.8.22",
+    "autoprefixer": "^6.3.6",
+    "bootstrap-sass": "^3.3.6",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.23.1",
+    "elm": "^0.17.0",
+    "elm-hot-loader": "^0.3.2",
+    "elm-webpack-loader": "^3.0.3",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.17.0",
+    "jquery": "^3.1.0",
+    "node-sass": "^3.7.0",
+    "postcss-loader": "^0.10.1",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-merge": "^0.14.1"
+  },
+  "devDependencies": {}
+}
