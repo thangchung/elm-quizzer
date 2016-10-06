@@ -18,7 +18,12 @@ pageHeader : Html Msg
 pageHeader =
     div [ class "page-header" ]
         [ h1 []
-            [ text "Quizz List" ]
+            [ i [ class "fa fa-bars" ] []
+            , span []
+                [ span [] [ text " Quizz List" ]
+                , small [] [ text " all the quizzes in this system..." ]
+                ]
+            ]
         ]
 
 
