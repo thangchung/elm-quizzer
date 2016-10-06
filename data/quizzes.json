@@ -2,6 +2,373 @@
     "quizzes": [
         {
             "id": 1,
+            "name": "Asp.Net Quiz",
+            "description": "Asp.Net Quiz (contains webform, mvc, web API, etc.)",
+            "questions": [
+                {
+                    "id": 1010,
+                    "name": "ASP.NET webform separates the HTML output from program logic using a feature named as",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Exception",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Code-behind",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Code-front",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "None of the above",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1011,
+                    "name": "The feature in ASP.NET 2.0 that is used to fire a normal postback to a different page in the application is called",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Theme",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Code-front",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Cross Page Posting",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "None of the above",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1012,
+                    "name": "What class does the ASP.NET Web Form class inherit from by default?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "System.Web.UI.Page",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "System.Web.UI.Form",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "System.Web.GUI.Page",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "System.Web.Form",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1013,
+                    "name": "What does MVC stand for?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Model View Controller",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Maximum Virtual Control",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Microsoft Visual Core",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "None of the above",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1014,
+                    "name": "Which of the following does NOT require type casting?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Session",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "TempData",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "ViewData",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "ViewBag",
+                            "is_answer": true
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1015,
+                    "name": "Which is the correct order of Page life-cycle in asp.net webform?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Init, PreRender, Load",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Load, PreRender, Init",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Init, Load, PreRender",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "None of the above",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1016,
+                    "name": "Which of these data source controls do not implement caching?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "ObjectDataSource",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "LinqDataSource",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "SqlDataSource",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "XmlDataSource",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1017,
+                    "name": "Which tag asp:Label control by default renders to?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "div",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "span",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "body",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "label",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1018,
+                    "name": "Which method do you use to explicitly kill a user's session?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Session.Terminate()",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Session.TimeOut()",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Session.Abondon()",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Session.Kill()",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1019,
+                    "name": "Which of the following object is ideal for keeping data alive for a single request?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "HttpContext",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Session",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Cookies",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "SqlServer",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
             "name": "C# and .Net Framework",
             "description": "C# and .Net Quiz (contains C#, .Net Framework, Linq, etc.)",
             "questions": [
@@ -362,6 +729,373 @@
                             "id": 1058,
                             "question_id": 1010,
                             "name": "Long",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Design Patterns",
+            "description": "Design Patterns Quiz including solid principles.",
+            "questions": [
+                {
+                    "id": 1010,
+                    "name": "In SOLid principle, O stands for:",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Objects and Variables",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Open-Closed Principle",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Object Oriented Programming",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "OutOfMemory Exception",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1011,
+                    "name": "Which pattern defines an interface for creating an object, but let the subclasses decide which class to instantiate. It let the instantiation differ to subclasses.",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Factory Method",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Abstract Factory",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Builder",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Prototype",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1012,
+                    "name": "Which pattern attach the additional responsibilities to an object dynamically.It provides a flexible alternative to subclassing for extending functionality.",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Chain of responsibility",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Adapter",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Decorator",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Composite",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1013,
+                    "name": "Singleton pattern is a (according to Gang of Four):",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Creational Pattern",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Behavioural Pattern",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Structural Pattern",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "None of the above",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1014,
+                    "name": "MVC, MVP and MVVP are related to which layer of software architecture?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Data Access Layer",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Business/Service Layer",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Third Party Library",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "User Interface",
+                            "is_answer": true
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1015,
+                    "name": "Which pattern defines a family of algorithms, encapsulate each one, and make them interchangeable. It lets the algorithm vary independently from clients that use it?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Template method",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Decorator",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Strategy",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Visitor",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1016,
+                    "name": "Which pattern define one to many dependency between objects so that when one object change state, all its dependent are notified and updated automatically?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Chain of responsibility",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Observer Pattern",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Event Notification",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Deligate Pattern",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1017,
+                    "name": "Which pattern ensures a class has only one instance, and provide a global access point to it?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Single Class Factory",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Singleton",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Proxy",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Flyweight",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1018,
+                    "name": "Which pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation?",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Iterator",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Visitor",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Composite",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "Command",
+                            "is_answer": false
+                        }
+                    ],
+                    "question_type": {
+                        "id": 1,
+                        "name": "Multiple Choice",
+                        "is_active": true
+                    }
+                },
+                {
+                    "id": 1019,
+                    "name": "In SOLid principles 'S' stands for:",
+                    "question_type_id": 1,
+                    "options": [
+                        {
+                            "id": 1055,
+                            "question_id": 1010,
+                            "name": "Single Responsibility",
+                            "is_answer": true
+                        },
+                        {
+                            "id": 1056,
+                            "question_id": 1010,
+                            "name": "Session",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1057,
+                            "question_id": 1010,
+                            "name": "Strength",
+                            "is_answer": false
+                        },
+                        {
+                            "id": 1058,
+                            "question_id": 1010,
+                            "name": "SqlServer",
                             "is_answer": false
                         }
                     ],

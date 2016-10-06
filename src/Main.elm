@@ -1,37 +1,43 @@
 module Main exposing (..)
 
-import Html exposing (..)
-import Html.Attributes exposing (..)
-import Html.App as Html
+import Navigation
+import Messages exposing (Msg(..))
+import Models exposing (Model, initialModel)
+import View exposing (view)
+import Update exposing (update)
+import Quizzes.Commands exposing (fetchQuizzes)
+import Routing exposing (Route)
 
 
+init : Result String Route -> ( Model, Cmd Msg )
+init result =
+    let
+        currentRoute =
+            Routing.routeFromResult result
+    in
+        ( initialModel currentRoute, Cmd.map QuizzesMsg fetchQuizzes )
+
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+
+
+urlUpdate : Result String Route -> Model -> ( Model, Cmd Msg )
+urlUpdate result model =
+    let
+        currentRoute =
+            Routing.routeFromResult result
+    in
+        ( { model | route = currentRoute }, Cmd.none )
+
+
+main : Program Never
 main =
-    Html.beginnerProgram { model = model, view = view, update = update }
-
-
-type alias Model =
-    Int
-
-
-model : number
-model =
-    0
-
-
-type Msg
-    = NoOp
-
-
-update : Msg -> Model -> Model
-update msg model =
-    case msg of
-        NoOp ->
-            model
-
-
-view : Model -> Html Msg
-view model =
-    div [ id "main-container" ]
-        [ p []
-            [ text "Hello Elm !!!" ]
-        ]
+    Navigation.program Routing.parser
+        { init = init
+        , view = view
+        , update = update
+        , urlUpdate = urlUpdate
+        , subscriptions = subscriptions
+        }
