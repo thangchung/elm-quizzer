@@ -1,7 +1,8 @@
-module Quizzes.List exposing (..)
+module Quizzes.View.List exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (class)
+import Html.Attributes exposing (class, href)
+import Html.Events exposing (onClick)
 import Quizzes.Messages exposing (..)
 import Quizzes.Models exposing (Quizz)
 
@@ -18,7 +19,7 @@ pageHeader : Html Msg
 pageHeader =
     div [ class "page-header" ]
         [ h1 []
-            [ i [ class "fa fa-bars" ] []
+            [ i [ class "fa fa-th-large" ] []
             , span []
                 [ span [] [ text " Quizz List" ]
                 , small [] [ text " all the quizzes in this system..." ]
@@ -47,6 +48,11 @@ quizzRow : Quizz -> Html Msg
 quizzRow quizz =
     tr []
         [ td [] [ text (toString quizz.id) ]
-        , td [] [ text (toString quizz.name) ]
-        , td [] [ text (toString quizz.description) ]
+        , td []
+            [ a
+                [ onClick (ShowQuizz quizz.id)
+                ]
+                [ text quizz.name ]
+            ]
+        , td [] [ text (quizz.description) ]
         ]
