@@ -4,6 +4,7 @@ import Html exposing (Html, div, text)
 import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
+import Shared.NavBar as NavBar
 import Quizzes.View.List as QuizzesView
 import Quizzes.View.Quizz as QuizzView
 import Quizzes.Models exposing (QuizzId)
@@ -13,7 +14,9 @@ import Routing exposing (Route(..))
 view : Model -> Html Msg
 view model =
     div []
-        [ page model ]
+        [ Html.App.map NavBarMessage <| NavBar.view model.route
+        , page model
+        ]
 
 
 page : Model -> Html Msg

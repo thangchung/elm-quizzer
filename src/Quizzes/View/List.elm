@@ -1,7 +1,7 @@
 module Quizzes.View.List exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (class, href)
+import Html.Attributes exposing (class, attribute, href)
 import Html.Events exposing (onClick)
 import Quizzes.Messages exposing (..)
 import Quizzes.Models exposing (Quizz)
@@ -9,7 +9,10 @@ import Quizzes.Models exposing (Quizz)
 
 view : List Quizz -> Html Msg
 view quizzes =
-    div [ class "container" ]
+    div
+        [ class "container-fluid"
+        , attribute "style" "margin-top: 50px"
+        ]
         [ pageHeader
         , quizzList quizzes
         ]

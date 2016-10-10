@@ -19,10 +19,8 @@ fetchQuizzesUrl =
     "http://localhost:8000/quizzes"
 
 
-
--- Encode & Decode
-
-
+{-| Encode & Decode functionalities.
+-}
 quizzesDecoder : Decode.Decoder (List Quizz)
 quizzesDecoder =
     Decode.list quizzDecoder
