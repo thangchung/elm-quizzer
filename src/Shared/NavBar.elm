@@ -41,7 +41,10 @@ view currentRoute =
                     , span [ class "icon-bar" ] []
                     , span [ class "icon-bar" ] []
                     ]
-                , a [ class "navbar-brand" ] [ text "Quizzer" ]
+                , a
+                    [ class "navbar-brand"
+                    ]
+                    [ text "Quizzer" ]
                 ]
             , div [ class "collapse navbar-collapse", id "bs-example-navbar-collapse-1" ]
                 [ ul [ class "nav navbar-nav navbar-right" ]

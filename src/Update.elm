@@ -3,11 +3,16 @@ module Update exposing (..)
 import Messages exposing (Msg(..))
 import Models exposing (Model)
 import Quizzes.Update
+import Shared.NavBar as NavBar
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update message model =
     case message of
+        NavBarMessage subMsg ->
+            NavBar.update subMsg model
+                |> (\( m, c ) -> ( m, Cmd.map NavBarMessage c ))
+
         QuizzesMsg subMsg ->
             let
                 ( updatedQuizzes, cmd ) =

@@ -5,6 +5,7 @@ import Html.Attributes exposing (class, attribute, href)
 import Html.Events exposing (onClick)
 import Quizzes.Messages exposing (..)
 import Quizzes.Models exposing (Quizz)
+import Shared.PageHeader exposing (pageHeaderDetails)
 
 
 view : List Quizz -> Html Msg
@@ -13,22 +14,19 @@ view quizzes =
         [ class "container-fluid"
         , attribute "style" "margin-top: 50px"
         ]
-        [ pageHeader
+        [ pageHeaderDetails quizzHeaderTitle quizzHeaderDescription
         , quizzList quizzes
         ]
 
 
-pageHeader : Html Msg
-pageHeader =
-    div [ class "page-header" ]
-        [ h1 []
-            [ i [ class "fa fa-th-large" ] []
-            , span []
-                [ span [] [ text " Quizz List" ]
-                , small [] [ text " all the quizzes in this system..." ]
-                ]
-            ]
-        ]
+quizzHeaderTitle : String
+quizzHeaderTitle =
+    " Quizz List"
+
+
+quizzHeaderDescription : String
+quizzHeaderDescription =
+    " all the quizzes in this system..."
 
 
 quizzList : List Quizz -> Html Msg
