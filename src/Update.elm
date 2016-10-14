@@ -8,7 +8,7 @@ import Shared.NavBar as NavBar
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update message model =
-    case message of
+    case Debug.log "QuizzesMsg" message of
         NavBarMessage subMsg ->
             NavBar.update subMsg model
                 |> (\( m, c ) -> ( m, Cmd.map NavBarMessage c ))
