@@ -1,21 +1,20 @@
 module Quizzes.View.List exposing (..)
 
 import Html exposing (..)
-import Html.Attributes exposing (class, attribute, href)
+import Html.Attributes exposing (class, attribute, href, style)
 import Html.Events exposing (onClick)
+import Html.Lazy exposing (lazy, lazy2)
 import Quizzes.Messages exposing (..)
-import Quizzes.Models exposing (Quizz)
+import Quizzes.Types exposing (Quizz)
 import Shared.PageHeader exposing (pageHeaderDetails)
 
 
 view : List Quizz -> Html Msg
 view quizzes =
     div
-        [ class "container-fluid"
-        , attribute "style" "margin-top: 50px"
-        ]
+        [ class "container-fluid" ]
         [ pageHeaderDetails quizzHeaderTitle quizzHeaderDescription
-        , quizzList quizzes
+        , lazy quizzList quizzes
         ]
 
 

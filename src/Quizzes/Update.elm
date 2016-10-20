@@ -1,7 +1,7 @@
 module Quizzes.Update exposing (..)
 
 import Quizzes.Messages exposing (Msg(..))
-import Quizzes.Models exposing (Quizz, QuizzId)
+import Quizzes.Types exposing (Quizz, QuizzId)
 import Navigation
 
 
@@ -11,7 +11,7 @@ update message quizzes =
         FetchQuizzesDone newQuizzes ->
             ( newQuizzes, Cmd.none )
 
-        FetchQuizzesFail error ->
+        FetchQuizzesFail ->
             ( quizzes, Cmd.none )
 
         ShowQuizzes ->

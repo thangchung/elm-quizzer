@@ -1,6 +1,6 @@
 module Models exposing (..)
 
-import Quizzes.Models exposing (Quizz)
+import Quizzes.Types exposing (Quizz)
 import Routing
 
 

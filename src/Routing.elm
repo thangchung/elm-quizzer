@@ -3,7 +3,7 @@ module Routing exposing (..)
 import String
 import Navigation
 import UrlParser exposing (..)
-import Quizzes.Models exposing (QuizzId)
+import Quizzes.Types exposing (QuizzId)
 
 
 type Route

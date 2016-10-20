@@ -1,7 +1,7 @@
 module View exposing (..)
 
 import Html exposing (Html, div, text)
-import Html.Attributes exposing (class)
+import Html.Attributes exposing (class, style)
 import Html.App
 import Messages exposing (Msg(..))
 import Models exposing (Model)
@@ -9,13 +9,16 @@ import Shared.NavBar as NavBar
 import Shared.Footer as Footer
 import Quizzes.View.List as QuizzesView
 import Quizzes.View.Quizz as QuizzView
-import Quizzes.Models exposing (QuizzId)
+import Quizzes.Types exposing (QuizzId)
 import Routing exposing (Route(..))
 
 
 view : Model -> Html Msg
 view model =
-    div [ class "container-fluid" ]
+    div
+        [ class "container-fluid"
+        , style [ ( "margin-top", "50px" ) ]
+        ]
         [ Html.App.map NavBarMessage <| NavBar.view model.route
         , page model
         , Footer.view
