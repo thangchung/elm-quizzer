@@ -1,10 +1,19 @@
-### Run the server
+# Quizzer Application
+
+[![ICARE](https://icarebadge.com/ICARE-white.png)](https://icarebadge.com)
+
+## Run the server
 
 `npm run api`
 
-### Run the client
+## Run the client
 
 `npm start`
 
-### Mock-up screen
+## Mock-up screen
 - [Quizz screen](https://jsfiddle.net/thangchung/fm4yk9cj/)
+
+## Contributing
+Want to contribute to this project? Nice! Submit a PR or leave an issue. Feedback
+is encouraged and graciously accepted and my hope is that this can be a fun
+community project for people of all skill levels to contribute.
