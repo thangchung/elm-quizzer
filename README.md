@@ -10,6 +10,12 @@
 
 `npm start`
 
+## Build Electron Application
+
+`npm install -g electron`
+
+`electron main.js`
+
 ## Mock-up screen
 - [Quizz screen](https://jsfiddle.net/thangchung/fm4yk9cj/)
 

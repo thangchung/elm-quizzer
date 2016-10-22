@@ -46,5 +46,7 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "elm-webpack-loader": "^3.0.6"
+  }
 }
