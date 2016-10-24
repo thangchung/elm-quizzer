@@ -8,3 +8,4 @@ type Msg
     | FetchQuizzesFail
     | ShowQuizzes
     | ShowQuizz QuizzId
+    | DoQuizz QuizzId

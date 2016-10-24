@@ -1,8 +1,9 @@
-module Shared.NavBar exposing (..)
+module Shared.NavBar exposing (Msg, update, view)
 
 import Navigation
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Html.Events exposing (onClick)
 import Routing exposing (..)
 
 
@@ -41,16 +42,18 @@ view currentRoute =
                     , span [ class "icon-bar" ] []
                     , span [ class "icon-bar" ] []
                     ]
-                , a
-                    [ class "navbar-brand"
+                , div [ onClick Dashboard ]
+                    [ a
+                        [ class "navbar-brand"
+                        ]
+                        [ text "Quizzer" ]
                     ]
-                    [ text "Quizzer" ]
                 ]
             , div [ class "collapse navbar-collapse", id "bs-example-navbar-collapse-1" ]
                 [ ul [ class "nav navbar-nav navbar-right" ]
                     [ li
                         []
-                        [ a [] [ text "Logged in as thangchung" ] ]
+                        [ a [ href "#" ] [ text "Logged in as thangchung" ] ]
                     ]
                 ]
             ]

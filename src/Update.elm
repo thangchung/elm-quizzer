@@ -1,4 +1,4 @@
-module Update exposing (..)
+module Update exposing (update)
 
 import Messages exposing (Msg(..))
 import Models exposing (Model)
@@ -15,7 +15,7 @@ update message model =
 
         QuizzesMsg subMsg ->
             let
-                ( updatedQuizzes, cmd ) =
-                    Quizzes.Update.update subMsg model.quizzes
+                ( updatedQuizzesModel, cmd ) =
+                    Quizzes.Update.update model model.quizzesModel subMsg
             in
-                ( { model | quizzes = updatedQuizzes }, Cmd.map QuizzesMsg cmd )
+                ( { model | quizzesModel = updatedQuizzesModel }, Cmd.map QuizzesMsg cmd )

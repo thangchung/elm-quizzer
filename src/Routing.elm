@@ -9,6 +9,7 @@ import Quizzes.Types exposing (QuizzId)
 type Route
     = QuizzesRoute
     | QuizzRoute QuizzId
+    | DoQuizzRoute QuizzId
     | NotFoundRoute
 
 
@@ -16,6 +17,7 @@ matchers : Parser (Route -> a) a
 matchers =
     oneOf
         [ format QuizzesRoute (s "")
+        , format DoQuizzRoute (s "test" </> int)
         , format QuizzRoute (s "quizzes" </> int)
         , format QuizzesRoute (s "quizzes")
         ]

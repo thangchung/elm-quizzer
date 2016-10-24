@@ -4,18 +4,21 @@ import Html exposing (..)
 import Html.Attributes exposing (class, attribute, href, style)
 import Html.Events exposing (onClick)
 import Html.Lazy exposing (lazy, lazy2)
+import Models exposing (Model)
 import Quizzes.Messages exposing (..)
 import Quizzes.Types exposing (Quizz)
 import Shared.PageHeader exposing (pageHeaderDetails)
 
 
-view : List Quizz -> Html Msg
-view quizzes =
-    div
-        [ class "container-fluid" ]
-        [ pageHeaderDetails quizzHeaderTitle quizzHeaderDescription
-        , lazy quizzList quizzes
-        ]
+view : Model -> Html Msg
+view model =
+    case model.quizzesModel of
+        quizzesModel ->
+            div
+                [ class "container-fluid" ]
+                [ pageHeaderDetails quizzHeaderTitle quizzHeaderDescription
+                , lazy quizzList quizzesModel.quizzes
+                ]
 
 
 quizzHeaderTitle : String
@@ -37,6 +40,7 @@ quizzList quizzes =
                     [ th [] [ text "Id" ]
                     , th [] [ text "Name" ]
                     , th [] [ text "Description" ]
+                    , th [] []
                     ]
                 ]
             , tbody [] (List.map quizzRow quizzes)
@@ -55,4 +59,5 @@ quizzRow quizz =
                 [ text quizz.name ]
             ]
         , td [] [ text (quizz.description) ]
+        , td [] [ button [ class "btn btn-default btn-xs", onClick (DoQuizz quizz.id) ] [ text "Test" ] ]
         ]

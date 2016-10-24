@@ -1,21 +1,45 @@
 module Quizzes.Update exposing (..)
 
+import Models exposing (Model, QuizzesModel)
 import Quizzes.Messages exposing (Msg(..))
-import Quizzes.Types exposing (Quizz, QuizzId)
 import Navigation
 
 
-update : Msg -> List Quizz -> ( List Quizz, Cmd Msg )
-update message quizzes =
+update : Model -> QuizzesModel -> Msg -> ( QuizzesModel, Cmd Msg )
+update model quizzesModel message =
     case message of
         FetchQuizzesDone newQuizzes ->
-            ( newQuizzes, Cmd.none )
+            ( { quizzesModel | quizzes = newQuizzes }, Cmd.none )
 
         FetchQuizzesFail ->
-            ( quizzes, Cmd.none )
+            ( quizzesModel, Cmd.none )
 
         ShowQuizzes ->
-            ( quizzes, Navigation.newUrl "#quizzes" )
+            ( quizzesModel, Navigation.newUrl "#quizzes" )
 
         ShowQuizz id ->
-            ( quizzes, Navigation.newUrl ("#quizzes/" ++ (toString id)) )
+            ( quizzesModel, Navigation.newUrl ("#quizzes/" ++ (toString id)) )
+
+        DoQuizz id ->
+            let
+                maybeQuizz =
+                    quizzesModel.quizzes
+                        |> List.filter (\quizz -> quizz.id == id)
+                        |> List.head
+            in
+                case maybeQuizz of
+                    Just quizz ->
+                        let
+                            maybeQuestion =
+                                quizz.questions
+                                    |> List.head
+                        in
+                            ( { quizzesModel
+                                | currentQuestion = maybeQuestion
+                                , currentQuestionIndex = 1
+                              }
+                            , Navigation.newUrl ("#test/" ++ (toString id))
+                            )
+
+                    Nothing ->
+                        ( quizzesModel, Navigation.newUrl "#quizzes" )
