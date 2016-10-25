@@ -1,4 +1,14 @@
-module Quizzes.Types exposing (..)
+module Quizzes.Types
+    exposing
+        ( QuizzId
+        , Quizz
+        , QuestionId
+        , Question
+        , QuestionType
+        , OptionId
+        , Option
+        , initQuizz
+        )
 
 
 type alias QuizzId =

@@ -9,3 +9,5 @@ type Msg
     | ShowQuizzes
     | ShowQuizz QuizzId
     | DoQuizz QuizzId
+    | TestClickNext QuizzId
+    | TestClickPrevious QuizzId

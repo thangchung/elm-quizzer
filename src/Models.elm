@@ -12,6 +12,7 @@ type alias Model =
 
 type alias QuizzesModel =
     { quizzes : List Quizz
+    , totalQuestions : List Question
     , currentQuestion : Maybe Question
     , currentQuestionIndex : Int
     }
@@ -21,6 +22,7 @@ initialModel : Routing.Route -> Model
 initialModel route =
     { quizzesModel =
         { quizzes = []
+        , totalQuestions = []
         , currentQuestion = Nothing
         , currentQuestionIndex = 0
         }
