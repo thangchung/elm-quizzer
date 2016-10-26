@@ -11,4 +11,5 @@ type Msg
     | DoQuizz QuizzId
     | TestClickNext QuizzId
     | TestClickPrevious QuizzId
-    | CancelTest
+    | ConfirmingCancelTest
+    | ConfirmedCancelTest Bool

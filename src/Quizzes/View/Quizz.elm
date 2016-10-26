@@ -36,12 +36,7 @@ view quizz =
             ]
         , div [ class "container", attribute "style" "margin-top: 10px;" ]
             (List.map renderQuestion quizz.questions)
-        , div []
-            [ button [ class "btn btn-primary", type' "button" ]
-                [ text "Finish" ]
-            , button [ class "btn btn-link", type' "button" ]
-                [ text "Cancel" ]
-            ]
+        , div [] []
         ]
 
 

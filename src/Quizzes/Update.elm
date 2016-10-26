@@ -3,6 +3,7 @@ module Quizzes.Update exposing (..)
 import Quizzes.Types exposing (Quizz, QuizzId, Question)
 import Models exposing (Model, QuizzesModel)
 import Quizzes.Messages exposing (Msg(..))
+import Ports exposing (confirmingCancelTest)
 import Navigation
 
 
@@ -85,8 +86,14 @@ update model quizzesModel message =
                     Nothing ->
                         ( quizzesModel, Navigation.newUrl "#quizzes" )
 
-        CancelTest ->
-            ( quizzesModel, Navigation.newUrl ("#") )
+        ConfirmingCancelTest ->
+            ( quizzesModel, confirmingCancelTest ("Do you want to leave?") )
+
+        ConfirmedCancelTest isClose ->
+            if isClose == True then
+                ( quizzesModel, Navigation.newUrl ("#") )
+            else
+                ( quizzesModel, Cmd.none )
 
 
 getQuizzById : List Quizz -> QuizzId -> Maybe Quizz
