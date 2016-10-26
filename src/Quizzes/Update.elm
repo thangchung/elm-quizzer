@@ -85,6 +85,9 @@ update model quizzesModel message =
                     Nothing ->
                         ( quizzesModel, Navigation.newUrl "#quizzes" )
 
+        CancelTest ->
+            ( quizzesModel, Navigation.newUrl ("#") )
+
 
 getQuizzById : List Quizz -> QuizzId -> Maybe Quizz
 getQuizzById quizzes id =

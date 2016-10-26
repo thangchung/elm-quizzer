@@ -34,7 +34,7 @@ renderQuestion quizzId question =
                 , div [ class "panel-footer" ]
                     [ button [ class "btn btn-default", onClick (TestClickPrevious quizzId) ] [ text "Back" ]
                     , button [ class "btn btn-default", onClick (TestClickNext quizzId) ] [ text "Next" ]
-                    , button [ class "btn btn-warning" ] [ text "Cancel" ]
+                    , button [ class "btn btn-warning", onClick CancelTest ] [ text "Cancel" ]
                     ]
                 ]
             ]

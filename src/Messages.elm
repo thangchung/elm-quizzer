@@ -1,9 +1,9 @@
-module Messages exposing (..)
+module Messages exposing (Msg(..))
 
-import Quizzes.Messages
+import Quizzes.Messages as QuizzesMessages
 import Shared.NavBar as NavBar
 
 
 type Msg
     = NavBarMessage NavBar.Msg
-    | QuizzesMsg Quizzes.Messages.Msg
+    | QuizzesMsg QuizzesMessages.Msg

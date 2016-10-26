@@ -59,5 +59,5 @@ quizzRow quizz =
                 [ text quizz.name ]
             ]
         , td [] [ text (quizz.description) ]
-        , td [] [ button [ class "btn btn-default btn-xs", onClick (DoQuizz quizz.id) ] [ text "Test" ] ]
+        , td [] [ button [ class "btn btn-primary btn-xs", onClick (DoQuizz quizz.id) ] [ text "Test" ] ]
         ]

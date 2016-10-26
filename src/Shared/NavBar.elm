@@ -1,4 +1,4 @@
-module Shared.NavBar exposing (Msg, update, view)
+module Shared.NavBar exposing (Msg(..), update, view)
 
 import Navigation
 import Html exposing (..)
