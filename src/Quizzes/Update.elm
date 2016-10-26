@@ -55,11 +55,13 @@ update model quizzesModel message =
                             ( updatedIndex, maybeQuestion ) =
                                 getUpdatedQuestion quizz.questions quizzesModel True
                         in
-                            ( { quizzesModel
-                                | currentQuestion = maybeQuestion
-                                , currentQuestionIndex = Debug.log "currentQuestionIndex" updatedIndex
-                              }
-                            , Navigation.newUrl ("#test/" ++ (toString id))
+                            (( Debug.log "Next Model"
+                                { quizzesModel
+                                    | currentQuestion = maybeQuestion
+                                    , currentQuestionIndex = Debug.log "currentQuestionIndex" updatedIndex
+                                }
+                             , Navigation.newUrl ("#test/" ++ (toString id))
+                             )
                             )
 
                     Nothing ->
@@ -76,11 +78,13 @@ update model quizzesModel message =
                             ( updatedIndex, maybeQuestion ) =
                                 getUpdatedQuestion quizz.questions quizzesModel False
                         in
-                            ( { quizzesModel
-                                | currentQuestion = maybeQuestion
-                                , currentQuestionIndex = Debug.log "currentQuestionIndex" updatedIndex
-                              }
-                            , Navigation.newUrl ("#test/" ++ (toString id))
+                            (( Debug.log "Previous Model"
+                                { quizzesModel
+                                    | currentQuestion = maybeQuestion
+                                    , currentQuestionIndex = Debug.log "currentQuestionIndex" updatedIndex
+                                }
+                             , Navigation.newUrl ("#test/" ++ (toString id))
+                             )
                             )
 
                     Nothing ->
@@ -119,7 +123,7 @@ getUpdatedQuestion questions quizzesModel isNext =
                 getPreviousIndex quizzesModel
 
         question =
-            List.drop quizzesModel.currentQuestionIndex questions
+            List.drop updatedIndex questions
                 |> List.head
     in
         ( updatedIndex, question )
@@ -128,8 +132,8 @@ getUpdatedQuestion questions quizzesModel isNext =
 getNextIndex : QuizzesModel -> Int
 getNextIndex quizzesModel =
     if
-        quizzesModel.currentQuestionIndex
-            <= (Debug.log "Length" (List.length quizzesModel.totalQuestions))
+        (quizzesModel.currentQuestionIndex + 1)
+            < (Debug.log "Length" (List.length quizzesModel.totalQuestions))
     then
         quizzesModel.currentQuestionIndex + 1
     else
@@ -138,7 +142,7 @@ getNextIndex quizzesModel =
 
 getPreviousIndex : QuizzesModel -> Int
 getPreviousIndex quizzesModel =
-    if quizzesModel.currentQuestionIndex > 1 then
+    if quizzesModel.currentQuestionIndex > 0 then
         quizzesModel.currentQuestionIndex - 1
     else
         quizzesModel.currentQuestionIndex
