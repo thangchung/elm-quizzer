@@ -95,16 +95,15 @@ update model quizzesModel message =
                 updatedTime =
                     quizzesModel.totalTime - 1
 
-                nextCommand =
+                ( nextCommand, refreshedTime ) =
                     if updatedTime <= 0 then
-                        Navigation.newUrl "#quizzes"
+                        ( Navigation.newUrl "#", 60 )
                     else
-                        Cmd.none
+                        ( Cmd.none, updatedTime )
             in
-                ( Debug.log "Previous Model"
-                    { quizzesModel
-                        | totalTime = updatedTime
-                    }
+                ( { quizzesModel
+                    | totalTime = refreshedTime
+                  }
                 , nextCommand
                 )
 
@@ -113,7 +112,11 @@ update model quizzesModel message =
 
         ConfirmedCancelTest isClose ->
             if isClose == True then
-                ( quizzesModel, Navigation.newUrl ("#") )
+                ( { quizzesModel
+                    | totalTime = 60
+                  }
+                , Navigation.newUrl "#"
+                )
             else
                 ( quizzesModel, Cmd.none )
 
