@@ -24,8 +24,9 @@ currentTime t =
         date' =
             fromTime t
 
+        -- D.hour date'
         hour' =
-            leadingZero (D.hour date')
+            leadingZero (0)
 
         minute' =
             leadingZero (D.minute date')
@@ -58,6 +59,7 @@ prettifyText string =
 
 {-| RECT STYLE
 -}
+rectStyle : List (Attribute msg)
 rectStyle =
     [ width "200"
     , height "100"
@@ -69,6 +71,7 @@ rectStyle =
 
 {-| GENERATE THE CLOCK
 -}
+clock : Float -> Svg.Svg msg
 clock t =
     svg
         [ width "200", height "100", viewBox "0 0 200 100" ]

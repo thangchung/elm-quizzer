@@ -3,7 +3,6 @@ module Quizzes.View.Test exposing (view)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onClick)
-import Time exposing (Time)
 import Models exposing (Model)
 import Quizzes.Types exposing (..)
 import Quizzes.Messages exposing (..)
@@ -14,14 +13,14 @@ view : Model -> Quizz -> Html Msg
 view model quizz =
     case model.quizzesModel.currentQuestion of
         Just question ->
-            (renderQuestion quizz.id question model.quizzesModel.totalTime model.quizzesModel.time')
+            (renderQuestion quizz.id question model.quizzesModel.totalTime)
 
         Nothing ->
             div [] [ text "Don't have any question!!!" ]
 
 
-renderQuestion : QuizzId -> Question -> Int -> Time -> Html Msg
-renderQuestion quizzId question totalTime time =
+renderQuestion : QuizzId -> Question -> Int -> Html Msg
+renderQuestion quizzId question totalTime =
     div []
         [ div
             [ style
@@ -29,7 +28,7 @@ renderQuestion quizzId question totalTime time =
                 , ( "text-align", "center" )
                 ]
             ]
-            [ clock time ]
+            [ clock (toFloat (totalTime * 1000)) ]
         , div [ class "row" ]
             [ div [ class "panel panel-primary" ]
                 [ div [ class "panel-heading" ]
@@ -44,7 +43,6 @@ renderQuestion quizzId question totalTime time =
                     [ button [ class "btn btn-default", onClick (TestClickPrevious quizzId) ] [ text "Back" ]
                     , button [ class "btn btn-primary", onClick (TestClickNext quizzId) ] [ text "Next" ]
                     , button [ class "btn btn-danger", onClick ConfirmingCancelTest ] [ text "Cancel" ]
-                    , span [] [ b [] [ text (toString totalTime) ] ]
                     ]
                 ]
             ]

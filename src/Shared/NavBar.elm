@@ -53,7 +53,7 @@ view currentRoute =
                 [ ul [ class "nav navbar-nav navbar-right" ]
                     [ li
                         []
-                        [ a [ href "#" ] [ text "Logged in as thangchung" ] ]
+                        [ a [ href "#" ] [ text "Logged in as trainee" ] ]
                     ]
                 ]
             ]

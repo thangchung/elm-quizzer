@@ -9,6 +9,6 @@ view =
     footer []
         [ div [ class "container-fluid" ]
             [ p [ class "pull-left", attribute "style" "margin-top: 10px;" ]
-                [ text "Copyright 2016 by @thangchung    " ]
+                [ text "Copyright 2016 by @thangchung" ]
             ]
         ]
