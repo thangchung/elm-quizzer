@@ -15,6 +15,7 @@ type alias QuizzesModel =
     , totalQuestions : List Question
     , currentQuestion : Maybe Question
     , currentQuestionIndex : Int
+    , totalTime : Int
     }
 
 
@@ -25,6 +26,7 @@ initialModel route =
         , totalQuestions = []
         , currentQuestion = Nothing
         , currentQuestionIndex = 0
+        , totalTime = 60
         }
     , route = route
     }

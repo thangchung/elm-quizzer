@@ -1,6 +1,7 @@
 module Quizzes.Messages exposing (..)
 
 import Quizzes.Types exposing (QuizzId, Quizz)
+import Time exposing (Time)
 
 
 type Msg
@@ -11,5 +12,6 @@ type Msg
     | DoQuizz QuizzId
     | TestClickNext QuizzId
     | TestClickPrevious QuizzId
+    | Tick Time
     | ConfirmingCancelTest
     | ConfirmedCancelTest Bool

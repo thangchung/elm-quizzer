@@ -1,10 +1,10 @@
 module Quizzes.Update exposing (..)
 
+import Navigation
 import Quizzes.Types exposing (Quizz, QuizzId, Question)
 import Models exposing (Model, QuizzesModel)
 import Quizzes.Messages exposing (Msg(..))
 import Ports exposing (confirmingCancelTest)
-import Navigation
 
 
 update : Model -> QuizzesModel -> Msg -> ( QuizzesModel, Cmd Msg )
@@ -89,6 +89,24 @@ update model quizzesModel message =
 
                     Nothing ->
                         ( quizzesModel, Navigation.newUrl "#quizzes" )
+
+        Tick time ->
+            let
+                updatedTime =
+                    quizzesModel.totalTime - 1
+
+                nextCommand =
+                    if updatedTime <= 0 then
+                        Navigation.newUrl "#quizzes"
+                    else
+                        Cmd.none
+            in
+                ( Debug.log "Previous Model"
+                    { quizzesModel
+                        | totalTime = updatedTime
+                    }
+                , nextCommand
+                )
 
         ConfirmingCancelTest ->
             ( quizzesModel, confirmingCancelTest ("Do you want to leave?") )

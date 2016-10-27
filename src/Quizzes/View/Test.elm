@@ -12,14 +12,14 @@ view : Model -> Quizz -> Html Msg
 view model quizz =
     case model.quizzesModel.currentQuestion of
         Just question ->
-            (renderQuestion quizz.id question)
+            (renderQuestion quizz.id question model.quizzesModel.totalTime)
 
         Nothing ->
             div [] [ text "Don't have any question!!!" ]
 
 
-renderQuestion : QuizzId -> Question -> Html Msg
-renderQuestion quizzId question =
+renderQuestion : QuizzId -> Question -> Int -> Html Msg
+renderQuestion quizzId question time =
     div []
         [ div [ class "row" ]
             [ div [ class "panel panel-primary" ]
@@ -35,6 +35,7 @@ renderQuestion quizzId question =
                     [ button [ class "btn btn-default", onClick (TestClickPrevious quizzId) ] [ text "Back" ]
                     , button [ class "btn btn-primary", onClick (TestClickNext quizzId) ] [ text "Next" ]
                     , button [ class "btn btn-danger", onClick ConfirmingCancelTest ] [ text "Cancel" ]
+                    , span [] [ text (toString time) ]
                     ]
                 ]
             ]
