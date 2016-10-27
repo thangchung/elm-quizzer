@@ -103,6 +103,7 @@ update model quizzesModel message =
             in
                 ( { quizzesModel
                     | totalTime = refreshedTime
+                    , time' = time
                   }
                 , nextCommand
                 )
@@ -114,6 +115,7 @@ update model quizzesModel message =
             if isClose == True then
                 ( { quizzesModel
                     | totalTime = 60
+                    , time' = 0
                   }
                 , Navigation.newUrl "#"
                 )

@@ -2,6 +2,7 @@ module Models exposing (Model, QuizzesModel, initialModel)
 
 import Quizzes.Types exposing (Quizz, Question)
 import Routing
+import Time exposing (Time)
 
 
 type alias Model =
@@ -16,6 +17,7 @@ type alias QuizzesModel =
     , currentQuestion : Maybe Question
     , currentQuestionIndex : Int
     , totalTime : Int
+    , time' : Time
     }
 
 
@@ -27,6 +29,7 @@ initialModel route =
         , currentQuestion = Nothing
         , currentQuestionIndex = 0
         , totalTime = 60
+        , time' = 0
         }
     , route = route
     }
